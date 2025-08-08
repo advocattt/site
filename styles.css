@@ -1,93 +1,184 @@
-/* Основні налаштування та типографіка */
+/* Скидання стилів */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Базові стилі body */
 body {
   font-family: Arial, sans-serif;
   background: #f4f4f4;
   color: #333;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Схема "все центрується" */
+/* Контейнер для центрування контенту */
 .container {
   width: 90%;
   max-width: 960px;
-  margin: auto;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
 /* Хедер */
 header {
   background: #fff;
-  padding: 20px;
+  padding: 25px 15px 15px;
   text-align: center;
   border-bottom: 2px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
+
+header h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #007acc;
+  user-select: none;
+  margin-bottom: 10px;
+}
+
 header nav {
   margin-top: 10px;
 }
+
 header nav a {
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
   color: #333;
   font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  user-select: none;
 }
-header nav a:hover {
+
+header nav a:hover,
+header nav a:focus {
+  color: #005ba1;
+  outline: none;
+}
+
+/* Заголовки секцій */
+h2 {
+  font-size: 1.6rem;
   color: #007acc;
+  border-bottom: 3px solid #007acc;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+  user-select: none;
 }
 
 /* Секції */
-h2 {
-  margin: 20px 0;
-  font-size: 1.5rem;
-  color: #007acc;
-  border-bottom: 2px solid #007acc;
-  padding-bottom: 5px;
-}
 section {
-  background: #fff;
-  padding: 20px;
-  margin: 15px 0;
+  margin-bottom: 30px;
+}
+
+/* Послуги - список у сітці */
+ul {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+ul li {
+  background: #e6f0ff;
+  padding: 15px 20px;
   border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  color: #005ba1;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 91, 161, 0.15);
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+  background: #c7dbff;
 }
 
 /* Статті */
 article {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
 }
+
+article:last-child {
+  border-bottom: none;
+}
+
 article h3 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: #005ba1;
+  margin-bottom: 8px;
+  user-select: none;
 }
+
 article p {
-  margin: 10px 0;
+  color: #444;
+  font-weight: 400;
+  margin-bottom: 8px;
+  user-select: none;
 }
+
 article a {
-  color: #005ba1;
+  color: #007acc;
+  font-weight: 600;
   text-decoration: none;
+  user-select: none;
+  transition: color 0.3s ease;
 }
-article a:hover {
+
+article a:hover,
+article a:focus {
+  color: #004080;
   text-decoration: underline;
+  outline: none;
 }
 
 /* Контакти */
-#contacts {
-  font-size: 1rem;
-}
 #contacts p {
+  font-size: 1rem;
   margin: 8px 0;
+  color: #222;
+  user-select: none;
 }
 
 /* Футер */
 footer {
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
   background: #fff;
   color: #666;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
   border-top: 1px solid #ddd;
-  margin-top: 20px;
+  user-select: none;
+  margin-top: auto;
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  header nav a {
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
+  ul {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    padding: 15px 20px;
+    width: 95%;
+  }
 }
