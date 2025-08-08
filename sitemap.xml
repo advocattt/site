@@ -5,19 +5,19 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://твій_домен_або_піддомен/</loc>
+    <loc>https://advocattt.github.io/site/</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://твій_домен_або_піддомен/article1.html</loc>
+    <loc>https://advocattt.github.io/site/article1.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://твій_домен_або_піддомен/article2.html</loc>
+    <loc>https://advocattt.github.io/site/article2.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://твій_домен_або_піддомен/article3.html</loc>
+    <loc>https://advocattt.github.io/site/article3.html</loc>
     <priority>0.80</priority>
   </url>
 </urlset>
